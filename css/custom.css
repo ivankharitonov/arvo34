@@ -14,7 +14,7 @@ body {
 /* Focus state style for keyboard navigation */
 *[tabindex]:focus-visible,
 input[type="file"]:focus-visible {
-   outline: 0.125rem solid #4d65ff;
+   outline: 0.125rem solid var(--color-accent-1);
    outline-offset: 0.125rem;
 }
 
@@ -168,6 +168,332 @@ input[type="file"]:focus-visible {
 
 .splide__track {
   overflow: visible !important;
+}
+
+/* ============================================
+   Color Palette - Analytical & Structured
+   ============================================ */
+
+/* Color Variables */
+:root {
+  --color-primary: #0B1F3B;        /* Midnight Blue */
+  --color-secondary: #324A72;      /* Slate Blue */
+  --color-light-neutral: #F4F6FB; /* Cool Gray */
+  --color-accent-1: #26C6DA;       /* Electric Aqua */
+  --color-accent-2: #00BFA6;       /* Spring Green */
+  --color-white: #FFFFFF;
+  --color-text-on-dark: #FFFFFF;
+}
+
+/* ============================================
+   Hero Section - Midnight Blue Background
+   ============================================ */
+
+/* Hero section background */
+.section_header-home {
+  background-color: var(--color-primary) !important;
+  color: var(--color-text-on-dark) !important;
+}
+
+/* Hero section text - white */
+.section_header-home h1,
+.section_header-home h2,
+.section_header-home h3,
+.section_header-home p,
+.section_header-home .text-size-large,
+.section_header-home .text-size-medium,
+.section_header-home .text-size-small {
+  color: var(--color-text-on-dark) !important;
+}
+
+/* Hero section headings */
+.section_header-home .heading-style-h1,
+.section_header-home .heading-style-h2 {
+  color: var(--color-text-on-dark) !important;
+}
+
+/* ============================================
+   Buttons & CTAs - Electric Aqua
+   ============================================ */
+
+/* Primary buttons (CTAs) - Aqua */
+.button[data-wf--button--general-style="primary"],
+.button[data-wf--button--general-style="highlight"],
+.button.w-variant-3a3b1104-5456-783b-0f82-4028fcf9146c {
+  background-color: var(--color-accent-1) !important;
+  color: var(--color-white) !important;
+  border-color: var(--color-accent-1) !important;
+}
+
+.button[data-wf--button--general-style="primary"]:hover,
+.button[data-wf--button--general-style="highlight"]:hover,
+.button.w-variant-3a3b1104-5456-783b-0f82-4028fcf9146c:hover {
+  background-color: #1FB3C6 !important; /* Slightly darker aqua on hover */
+  border-color: #1FB3C6 !important;
+}
+
+/* Button text */
+.button[data-wf--button--general-style="primary"] .text-block,
+.button[data-wf--button--general-style="highlight"] .text-block {
+  color: var(--color-white) !important;
+}
+
+/* ============================================
+   Interior Pages - Cool Gray Backgrounds
+   ============================================ */
+
+/* Main body background */
+body {
+  background-color: var(--color-light-neutral) !important;
+}
+
+/* Section backgrounds - Cool Gray or White */
+.section_features-home,
+.section_our-process,
+.section_global-talent,
+.section_roles-slider,
+.section_cta-salary-guide,
+.section_testimonials {
+  background-color: var(--color-light-neutral) !important;
+}
+
+/* Alternating white backgrounds for variety */
+.section_features-home:nth-child(even),
+.section_our-process:nth-child(even) {
+  background-color: var(--color-white) !important;
+}
+
+/* ============================================
+   Text Colors - Midnight Blue & Slate Blue
+   ============================================ */
+
+/* Headings - Midnight Blue */
+h1, h2, h3, h4, h5, h6,
+.heading-style-h1,
+.heading-style-h2,
+.heading-style-h2-alternate,
+.heading-style-h3,
+.heading-style-h4,
+.heading-style-h4-alternate {
+  color: var(--color-primary) !important;
+}
+
+/* Body text - Slate Blue */
+p,
+.text-size-large,
+.text-size-medium,
+.text-size-small,
+.paragraph {
+  color: var(--color-secondary) !important;
+}
+
+/* Secondary text color */
+.text-color-secondary {
+  color: var(--color-secondary) !important;
+}
+
+/* ============================================
+   Accent Colors - Aqua Highlights
+   ============================================ */
+
+/* Links - Aqua */
+a,
+.navbar_link,
+.footer_link,
+.banner_link {
+  color: var(--color-accent-1) !important;
+}
+
+a:hover,
+.navbar_link:hover,
+.footer_link:hover {
+  color: #1FB3C6 !important; /* Darker aqua on hover */
+}
+
+/* Active/Current links */
+.navbar_link.w--current,
+.footer_link.w--current {
+  color: var(--color-accent-1) !important;
+  border-bottom-color: var(--color-accent-1) !important;
+}
+
+/* Accent lines and highlights */
+.roles_absolute-tag,
+.tag_size {
+  background-color: var(--color-accent-1) !important;
+  color: var(--color-white) !important;
+}
+
+/* Progress bars and indicators */
+.splide__carousel-progress-bar {
+  background-color: var(--color-accent-1) !important;
+}
+
+/* ============================================
+   Secondary Accent - Spring Green
+   ============================================ */
+
+/* Secondary buttons - Spring Green */
+.button[data-wf--button--general-style="tertiary"],
+.button.w-variant-e13d580c-fc5a-6a46-aa9d-d0668972902a {
+  background-color: transparent !important;
+  color: var(--color-accent-2) !important;
+  border-color: var(--color-accent-2) !important;
+}
+
+.button[data-wf--button--general-style="tertiary"]:hover,
+.button.w-variant-e13d580c-fc5a-6a46-aa9d-d0668972902a:hover {
+  background-color: var(--color-accent-2) !important;
+  color: var(--color-white) !important;
+}
+
+/* Secondary highlights */
+.splide__slide.roles:hover {
+  border-color: var(--color-accent-2) !important;
+}
+
+/* ============================================
+   CTA Sections
+   ============================================ */
+
+/* CTA Hire section background */
+.section_cta-hire {
+  background-color: var(--color-primary) !important;
+  color: var(--color-text-on-dark) !important;
+}
+
+.section_cta-hire h2,
+.section_cta-hire p,
+.section_cta-hire .text-size-small {
+  color: var(--color-text-on-dark) !important;
+}
+
+/* CTA Salary Guide section */
+.section_cta-salary-guide {
+  background-color: var(--color-light-neutral) !important;
+}
+
+.section_cta-salary-guide h2 {
+  color: var(--color-primary) !important;
+}
+
+/* ============================================
+   Navigation
+   ============================================ */
+
+/* Navbar background */
+.navbar_component {
+  background-color: var(--color-white) !important;
+}
+
+/* Navbar links */
+.navbar_link {
+  color: var(--color-secondary) !important;
+}
+
+.navbar_link:hover {
+  color: var(--color-accent-1) !important;
+}
+
+/* ============================================
+   Footer
+   ============================================ */
+
+/* Footer background */
+.footer_component {
+  background-color: var(--color-primary) !important;
+  color: var(--color-text-on-dark) !important;
+}
+
+/* Footer text */
+.footer_link,
+.footer_credit-text,
+.footer_link-column .text-weight-semibold {
+  color: var(--color-text-on-dark) !important;
+}
+
+.footer_link:hover {
+  color: var(--color-accent-1) !important;
+}
+
+/* ============================================
+   Form Elements
+   ============================================ */
+
+/* Form inputs */
+.hs-input,
+.w-input {
+  border-color: var(--color-secondary) !important;
+  color: var(--color-primary) !important;
+}
+
+.hs-input:focus,
+.w-input:focus {
+  border-color: var(--color-accent-1) !important;
+  outline-color: var(--color-accent-1) !important;
+}
+
+/* Form buttons */
+.hs-button {
+  background-color: var(--color-accent-1) !important;
+  color: var(--color-white) !important;
+}
+
+.hs-button:hover {
+  background-color: #1FB3C6 !important;
+}
+
+/* ============================================
+   Focus States
+   ============================================ */
+
+*[tabindex]:focus-visible,
+input[type="file"]:focus-visible {
+  outline: 0.125rem solid var(--color-accent-1) !important;
+  outline-offset: 0.125rem;
+}
+
+/* ============================================
+   Special Elements
+   ============================================ */
+
+/* Banner component */
+.banner_component {
+  background-color: var(--color-secondary) !important;
+  color: var(--color-text-on-dark) !important;
+}
+
+.banner_link {
+  color: var(--color-accent-1) !important;
+}
+
+/* Testimonials section */
+.section_testimonials {
+  background-color: var(--color-white) !important;
+}
+
+/* Roles slider cards */
+.roles-slider_item {
+  border-color: transparent !important;
+}
+
+.roles-slider_item:hover {
+  border-color: var(--color-accent-1) !important;
+}
+
+/* ============================================
+   Logo Styling (Note: Logo image needs to be updated separately)
+   ============================================ */
+
+/* Logo container - ensure proper display */
+.navbar_logo,
+.footer_logo {
+  filter: brightness(0) saturate(100%) invert(13%) sepia(30%) saturate(2000%) hue-rotate(200deg) brightness(0.9) contrast(1.1);
+}
+
+/* For white logo on dark backgrounds, you may need to adjust or replace the logo image */
+.footer_logo {
+  filter: brightness(0) invert(1); /* Makes logo white for dark footer */
 }
 
 /* Add your custom styles below this line */
