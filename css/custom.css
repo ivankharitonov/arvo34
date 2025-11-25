@@ -548,5 +548,93 @@ input[type="file"]:focus-visible {
   filter: brightness(0) invert(1); /* Makes logo white for dark footer */
 }
 
+/* ============================================
+   Our Process Section - Timeline Steps
+   ============================================ */
+
+/* Process timeline step cards - Midnight Blue background */
+.our-process_timeline-step {
+  background-color: var(--color-primary) !important;
+  background: var(--color-primary) !important;
+  color: var(--color-text-on-dark) !important;
+}
+
+/* Process step content area */
+.our-process_timeline-right {
+  color: var(--color-text-on-dark) !important;
+}
+
+/* Process step headings - White text */
+.our-process_timeline-step h3,
+.our-process_timeline-step .text-size-large,
+.our-process_timeline-step .text-size-huge,
+.our-process_timeline-step .heading-style-h2,
+.our-process_timeline-step .heading-style-h3 {
+  color: var(--color-text-on-dark) !important;
+}
+
+/* Process step body text - Light gray/white for readability */
+.our-process_timeline-step p,
+.our-process_timeline-step .paragraph,
+.our-process_timeline-step .text-size-medium,
+.our-process_timeline-step .text-size-small {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+/* Process step numbered circles - Aqua background with white text */
+.our-process_timeline-icon-wrapper {
+  background-color: var(--color-accent-1) !important;
+  background: var(--color-accent-1) !important;
+  color: var(--color-white) !important;
+}
+
+.our-process_timeline-icon-wrapper > div {
+  color: var(--color-white) !important;
+}
+
+/* Process step buttons - Aqua for primary actions */
+.our-process_timeline-step .button[data-wf--button--general-style="tertiary"],
+.our-process_timeline-step .button.w-variant-e13d580c-fc5a-6a46-aa9d-d0668972902a {
+  background-color: transparent !important;
+  border-color: var(--color-accent-1) !important;
+  color: var(--color-accent-1) !important;
+}
+
+.our-process_timeline-step .button[data-wf--button--general-style="tertiary"]:hover,
+.our-process_timeline-step .button.w-variant-e13d580c-fc5a-6a46-aa9d-d0668972902a:hover {
+  background-color: var(--color-accent-1) !important;
+  color: var(--color-white) !important;
+  border-color: var(--color-accent-1) !important;
+}
+
+.our-process_timeline-step .button[data-wf--button--general-style="tertiary"] .text-block,
+.our-process_timeline-step .button[data-wf--button--general-style="tertiary"] .button_link,
+.our-process_timeline-step .button.w-variant-e13d580c-fc5a-6a46-aa9d-d0668972902a .text-block,
+.our-process_timeline-step .button.w-variant-e13d580c-fc5a-6a46-aa9d-d0668972902a .button_link {
+  color: var(--color-accent-1) !important;
+}
+
+.our-process_timeline-step .button[data-wf--button--general-style="tertiary"]:hover .text-block,
+.our-process_timeline-step .button[data-wf--button--general-style="tertiary"]:hover .button_link,
+.our-process_timeline-step .button.w-variant-e13d580c-fc5a-6a46-aa9d-d0668972902a:hover .text-block,
+.our-process_timeline-step .button.w-variant-e13d580c-fc5a-6a46-aa9d-d0668972902a:hover .button_link {
+  color: var(--color-white) !important;
+}
+
+/* Process step CTA section (last step) - Keep same styling */
+.our-process_timeline-step.cta {
+  background-color: var(--color-primary) !important;
+  background: var(--color-primary) !important;
+}
+
+/* Process step links and text */
+.our-process_timeline-step a:not(.button_link) {
+  color: var(--color-accent-1) !important;
+}
+
+.our-process_timeline-step a:not(.button_link):hover {
+  color: #1FB3C6 !important;
+}
+
 /* Add your custom styles below this line */
 
