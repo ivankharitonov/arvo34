@@ -1,6 +1,11 @@
 /* ============================================
    Custom Styles for Somewhere Website
    Add your custom CSS here
+   
+   NOTE: If changes don't appear, try:
+   - Hard refresh: Ctrl+F5 (Windows) or Cmd+Shift+R (Mac)
+   - Clear browser cache
+   - Check browser DevTools to verify CSS is loading
    ============================================ */
 
 /* Make text look crisper and more legible in all browsers */
@@ -189,9 +194,13 @@ input[type="file"]:focus-visible {
    Hero Section - Midnight Blue Background
    ============================================ */
 
-/* Hero section background */
-.section_header-home {
+/* Hero section background - Very specific */
+header.section_header-home,
+.section_header-home,
+header.section_header-home .padding-section-header,
+.section_header-home .padding-section-header {
   background-color: var(--color-primary) !important;
+  background: var(--color-primary) !important;
   color: var(--color-text-on-dark) !important;
 }
 
@@ -216,10 +225,12 @@ input[type="file"]:focus-visible {
    Buttons & CTAs - Electric Aqua
    ============================================ */
 
-/* Primary buttons (CTAs) - Aqua */
+/* Primary buttons (CTAs) - Aqua - More specific selectors */
 .button[data-wf--button--general-style="primary"],
 .button[data-wf--button--general-style="highlight"],
-.button.w-variant-3a3b1104-5456-783b-0f82-4028fcf9146c {
+.button.w-variant-3a3b1104-5456-783b-0f82-4028fcf9146c,
+div[data-wf--button--general-style="primary"],
+div[data-wf--button--general-style="highlight"] {
   background-color: var(--color-accent-1) !important;
   color: var(--color-white) !important;
   border-color: var(--color-accent-1) !important;
@@ -227,15 +238,32 @@ input[type="file"]:focus-visible {
 
 .button[data-wf--button--general-style="primary"]:hover,
 .button[data-wf--button--general-style="highlight"]:hover,
-.button.w-variant-3a3b1104-5456-783b-0f82-4028fcf9146c:hover {
+.button.w-variant-3a3b1104-5456-783b-0f82-4028fcf9146c:hover,
+div[data-wf--button--general-style="primary"]:hover,
+div[data-wf--button--general-style="highlight"]:hover {
   background-color: #1FB3C6 !important; /* Slightly darker aqua on hover */
   border-color: #1FB3C6 !important;
 }
 
-/* Button text */
+/* Button text and links */
 .button[data-wf--button--general-style="primary"] .text-block,
-.button[data-wf--button--general-style="highlight"] .text-block {
+.button[data-wf--button--general-style="highlight"] .text-block,
+.button[data-wf--button--general-style="primary"] .button_link,
+.button[data-wf--button--general-style="highlight"] .button_link,
+.button.w-variant-3a3b1104-5456-783b-0f82-4028fcf9146c .text-block,
+.button.w-variant-3a3b1104-5456-783b-0f82-4028fcf9146c .button_link {
   color: var(--color-white) !important;
+}
+
+/* Button clickable area */
+.button_clickable {
+  background-color: transparent !important;
+}
+
+.button[data-wf--button--general-style="primary"] .button_clickable,
+.button[data-wf--button--general-style="highlight"] .button_clickable,
+.button.w-variant-3a3b1104-5456-783b-0f82-4028fcf9146c .button_clickable {
+  background-color: transparent !important;
 }
 
 /* ============================================
@@ -335,15 +363,32 @@ a:hover,
 
 /* Secondary buttons - Spring Green */
 .button[data-wf--button--general-style="tertiary"],
-.button.w-variant-e13d580c-fc5a-6a46-aa9d-d0668972902a {
+.button.w-variant-e13d580c-fc5a-6a46-aa9d-d0668972902a,
+div[data-wf--button--general-style="tertiary"] {
   background-color: transparent !important;
   color: var(--color-accent-2) !important;
   border-color: var(--color-accent-2) !important;
 }
 
 .button[data-wf--button--general-style="tertiary"]:hover,
-.button.w-variant-e13d580c-fc5a-6a46-aa9d-d0668972902a:hover {
+.button.w-variant-e13d580c-fc5a-6a46-aa9d-d0668972902a:hover,
+div[data-wf--button--general-style="tertiary"]:hover {
   background-color: var(--color-accent-2) !important;
+  color: var(--color-white) !important;
+  border-color: var(--color-accent-2) !important;
+}
+
+.button[data-wf--button--general-style="tertiary"] .text-block,
+.button[data-wf--button--general-style="tertiary"] .button_link,
+.button.w-variant-e13d580c-fc5a-6a46-aa9d-d0668972902a .text-block,
+.button.w-variant-e13d580c-fc5a-6a46-aa9d-d0668972902a .button_link {
+  color: var(--color-accent-2) !important;
+}
+
+.button[data-wf--button--general-style="tertiary"]:hover .text-block,
+.button[data-wf--button--general-style="tertiary"]:hover .button_link,
+.button.w-variant-e13d580c-fc5a-6a46-aa9d-d0668972902a:hover .text-block,
+.button.w-variant-e13d580c-fc5a-6a46-aa9d-d0668972902a:hover .button_link {
   color: var(--color-white) !important;
 }
 
@@ -381,9 +426,12 @@ a:hover,
    Navigation
    ============================================ */
 
-/* Navbar background */
-.navbar_component {
+/* Navbar background - Very specific */
+.navbar_component,
+.navbar_component .navbar_container,
+div[role="banner"].navbar_component {
   background-color: var(--color-white) !important;
+  background: var(--color-white) !important;
 }
 
 /* Navbar links */
@@ -399,9 +447,13 @@ a:hover,
    Footer
    ============================================ */
 
-/* Footer background */
-.footer_component {
+/* Footer background - Very specific */
+footer.footer_component,
+.footer_component,
+footer.footer_component .padding-global,
+.footer_component .padding-global {
   background-color: var(--color-primary) !important;
+  background: var(--color-primary) !important;
   color: var(--color-text-on-dark) !important;
 }
 
