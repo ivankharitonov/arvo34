@@ -277,7 +277,6 @@ body {
 
 /* Section backgrounds - Cool Gray or White */
 .section_features-home,
-.section_our-process,
 .section_global-talent,
 .section_roles-slider,
 .section_cta-salary-guide,
@@ -286,8 +285,73 @@ body {
 }
 
 /* Alternating white backgrounds for variety */
-.section_features-home:nth-child(even),
-.section_our-process:nth-child(even) {
+.section_features-home:nth-child(even) {
+  background-color: var(--color-white) !important;
+}
+
+/* ============================================
+   Our Process & Header Stick to Midnight Blue
+   ============================================ */
+
+.section_our-process {
+  background-color: var(--color-primary) !important;
+  color: var(--color-white) !important;
+}
+
+.section_our-process h2,
+.section_our-process h3,
+.section_our-process p,
+.section_our-process .text-size-medium,
+.section_our-process .text-size-large,
+.section_our-process .text-size-small,
+.section_our-process .paragraph {
+  color: var(--color-white) !important;
+}
+
+.section_our-process .our-process_timeline-step {
+  background-color: rgba(11, 31, 59, 0.7) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+.section_our-process .our-process_timeline-step p {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.section_our-process .our-process_timeline-step .text-weight-bold {
+  color: var(--color-white) !important;
+}
+
+.section_our-process .our-process_timeline-icon-wrapper div {
+  color: var(--color-white) !important;
+}
+
+.section_our-process .component_button-group .button .text-block {
+  color: var(--color-white) !important;
+}
+
+/* Navbar stays Midnight Blue with white/nav link text */
+.navbar_component,
+.navbar_container,
+.navbar_menu,
+.navbar_menu-links,
+.navbar_button-wrapper,
+.navbar_menu-button,
+.navbar_dropdown-list {
+  background-color: var(--color-primary) !important;
+}
+
+.navbar_link,
+.navbar_dropdown-link,
+.navbar_dropdown-toggle,
+.navbar_dropdown-toggle div {
+  color: var(--color-white) !important;
+}
+
+.navbar_dropdown-toggle svg,
+.navbar_menu-button .menu-icon2_line-top,
+.navbar_menu-button .menu-icon2_line-middle,
+.navbar_menu-button .menu-icon2_line-bottom,
+.navbar_menu-button .menu-icon1_line-middle-inner {
   background-color: var(--color-white) !important;
 }
 
