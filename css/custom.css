@@ -479,11 +479,15 @@ div[data-wf--button--general-style="tertiary"]:hover {
 
 /* CTA Salary Guide section */
 .section_cta-salary-guide {
-  background-color: var(--color-light-neutral) !important;
+  background-color: var(--color-primary) !important;
+  background: var(--color-primary) !important;
+  color: var(--color-white) !important;
 }
 
-.section_cta-salary-guide h2 {
-  color: var(--color-primary) !important;
+.section_cta-salary-guide h2,
+.section_cta-salary-guide .text-size-medium,
+.section_cta-salary-guide p {
+  color: var(--color-white) !important;
 }
 
 /* ============================================
@@ -763,27 +767,33 @@ input[type="file"]:focus-visible {
 
 /* Download guide section matches header (white) */
 .section_cta-salary-guide {
-  background-color: var(--color-white) !important;
-  background: var(--color-white) !important;
-  color: var(--color-primary) !important;
+  background-color: var(--color-primary) !important;
+  background: var(--color-primary) !important;
+  color: var(--color-white) !important;
 }
 
 .section_cta-salary-guide .heading-style-h1,
-.section_cta-salary-guide .text-size-medium {
-  color: var(--color-primary) !important;
+.section_cta-salary-guide .text-size-medium,
+.section_cta-salary-guide .text-size-large,
+.section_cta-salary-guide .text-size-small,
+.section_cta-salary-guide p {
+  color: var(--color-white) !important;
 }
 
 .section_cta-salary-guide .hs-form input,
-.section_cta-salary-guide .hs-form textarea {
-  background-color: var(--color-light-neutral) !important;
+.section_cta-salary-guide .hs-form textarea,
+.section_cta-salary-guide .hs-form select {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+  color: var(--color-white) !important;
+  border-color: rgba(255, 255, 255, 0.3) !important;
 }
 
 .section_cta-salary-guide .hs-form fieldset {
-  border-color: var(--color-secondary) !important;
+  border-color: rgba(255, 255, 255, 0.4) !important;
 }
 
 .section_cta-salary-guide .hs-button {
-  background-color: var(--color-secondary) !important;
+  background-color: var(--color-accent-1) !important;
   color: var(--color-white) !important;
 }
 
@@ -803,11 +813,11 @@ input[type="file"]:focus-visible {
 }
 
 .navbar_dropdown-toggle {
-  color: var(--color-primary) !important;
+  color: var(--color-white) !important;
 }
 
 .navbar_dropdown-toggle > div {
-  color: var(--color-primary) !important;
+  color: var(--color-white) !important;
 }
 
 /* Make the process tagline readable */
@@ -818,7 +828,7 @@ input[type="file"]:focus-visible {
 /* Salary guide field names */
 .section_cta-salary-guide label,
 .section_cta-salary-guide .hs-form label {
-  color: var(--color-primary) !important;
+  color: var(--color-white) !important;
 }
 
 /* CTA button text in hiring section */
