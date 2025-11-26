@@ -467,14 +467,14 @@ div[data-wf--button--general-style="tertiary"]:hover {
 
 /* CTA Hire section background */
 .section_cta-hire {
-  background-color: var(--color-primary) !important;
-  color: var(--color-text-on-dark) !important;
+  background-color: var(--color-light-neutral) !important;
+  color: var(--color-primary) !important;
 }
 
 .section_cta-hire h2,
 .section_cta-hire p,
 .section_cta-hire .text-size-small {
-  color: var(--color-text-on-dark) !important;
+  color: var(--color-primary) !important;
 }
 
 /* CTA Salary Guide section */
@@ -519,6 +519,33 @@ div[role="banner"].navbar_component {
 .navbar_link:hover,
 .navbar_dropdown-link:hover {
   color: var(--color-accent-1) !important;
+}
+
+.navbar_dropdown-toggle {
+  background-color: transparent !important;
+  border: none !important;
+  padding-right: 0.25rem !important;
+}
+
+.navbar_dropdown-toggle .dropdown-chevron {
+  background-color: transparent !important;
+}
+
+.navbar_dropdown-toggle .dropdown-chevron svg {
+  transition: transform 0.25s ease;
+  transform: rotate(0deg);
+  color: inherit;
+  height: 0.75rem;
+  width: 0.75rem;
+}
+
+.navbar_menu-dropdown.w--open .navbar_dropdown-toggle .dropdown-chevron svg {
+  transform: rotate(180deg);
+}
+
+.navbar_dropdown-toggle:hover .dropdown-chevron svg,
+.navbar_dropdown-toggle:focus .dropdown-chevron svg {
+  transform: rotate(0deg) !important;
 }
 
 /* ============================================
