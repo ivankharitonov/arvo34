@@ -493,17 +493,27 @@ div[data-wf--button--general-style="tertiary"]:hover {
 /* Navbar background - Very specific */
 .navbar_component,
 .navbar_component .navbar_container,
+.navbar_menu-wrapper,
+.navbar_menu,
+.navbar_menu-links,
+.navbar_button-wrapper,
+.navbar_menu-button,
+.navbar_dropdown-list,
 div[role="banner"].navbar_component {
-  background-color: var(--color-white) !important;
-  background: var(--color-white) !important;
+  background-color: var(--color-primary) !important;
+  background: var(--color-primary) !important;
 }
 
 /* Navbar links */
-.navbar_link {
-  color: var(--color-secondary) !important;
+.navbar_link,
+.navbar_dropdown-link,
+.navbar_dropdown-toggle,
+.navbar_dropdown-toggle div {
+  color: var(--color-white) !important;
 }
 
-.navbar_link:hover {
+.navbar_link:hover,
+.navbar_dropdown-link:hover {
   color: var(--color-accent-1) !important;
 }
 
