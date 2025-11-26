@@ -719,5 +719,38 @@ input[type="file"]:focus-visible {
   background-color: transparent !important;
 }
 
+/* Brighten banner text + Resources link */
+.banner_component .banner_content-wrapper p {
+  color: var(--color-white) !important;
+}
+
+.banner_component .banner_link {
+  color: var(--color-accent-1) !important;
+}
+
+.navbar_dropdown-toggle {
+  color: var(--color-primary) !important;
+}
+
+.navbar_dropdown-toggle > div {
+  color: var(--color-primary) !important;
+}
+
+/* Make the process tagline readable */
+.section_our-process .heading-wrapper-center div[data-w-id]:not(.heading-style-h2) {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+/* Salary guide field names */
+.section_cta-salary-guide label,
+.section_cta-salary-guide .hs-form label {
+  color: var(--color-primary) !important;
+}
+
+/* CTA button text in hiring section */
+.section_cta-hire .button .text-block {
+  color: var(--color-white) !important;
+}
+
 /* Add your custom styles below this line */
 
