@@ -636,5 +636,88 @@ input[type="file"]:focus-visible {
   color: #1FB3C6 !important;
 }
 
+/* ============================================
+   Selection + Buttons + Tags (Palette accents)
+   ============================================ */
+
+/* Selected text highlight */
+::selection,
+::-moz-selection {
+  background: var(--color-accent-1);
+  color: var(--color-white);
+}
+
+/* Primary CTA buttons (Start Hiring / View All Roles etc.) */
+.section_header-home .button[data-wf--button--general-style="primary"],
+.section_cta-hire .button[data-wf--button--general-style="primary"],
+.section_header-home .button[data-wf--button--general-style="primary"] .text-block,
+.section_cta-hire .button[data-wf--button--general-style="primary"] .text-block,
+.section_header-home .button[data-wf--button--general-style="primary"] .button_link,
+.section_cta-hire .button[data-wf--button--general-style="primary"] .button_link {
+  background-color: var(--color-accent-1) !important;
+  border-color: var(--color-accent-1) !important;
+  color: var(--color-white) !important;
+}
+
+.section_header-home .button[data-wf--button--general-style="primary"]:hover,
+.section_cta-hire .button[data-wf--button--general-style="primary"]:hover {
+  background-color: #1FB3C6 !important;
+  border-color: #1FB3C6 !important;
+}
+
+/* Tag pills (Learn more, What’s possible, savings badges) */
+.roles_absolute-tag {
+  background-color: var(--color-accent-1) !important;
+  background: var(--color-accent-1) !important;
+}
+
+.roles_absolute-tag .tag_size {
+  border-radius: 999px !important;
+  background-color: var(--color-accent-1) !important;
+  color: var(--color-white) !important;
+}
+
+.roles_absolute-tag .tag-text {
+  color: var(--color-white) !important;
+}
+
+/* Process number squares */
+.our-process_timeline-icon-wrapper {
+  background-color: var(--color-accent-1) !important;
+  color: var(--color-white) !important;
+}
+
+/* Download guide section matches header (white) */
+.section_cta-salary-guide {
+  background-color: var(--color-white) !important;
+  background: var(--color-white) !important;
+  color: var(--color-primary) !important;
+}
+
+.section_cta-salary-guide .heading-style-h1,
+.section_cta-salary-guide .text-size-medium {
+  color: var(--color-primary) !important;
+}
+
+.section_cta-salary-guide .hs-form input,
+.section_cta-salary-guide .hs-form textarea {
+  background-color: var(--color-light-neutral) !important;
+}
+
+.section_cta-salary-guide .hs-form fieldset {
+  border-color: var(--color-secondary) !important;
+}
+
+.section_cta-salary-guide .hs-button {
+  background-color: var(--color-secondary) !important;
+  color: var(--color-white) !important;
+}
+
+/* Spread consistent backgrounds */
+.section_cta-salary-guide .cta-salary-guide_embed,
+.section_cta-salary-guide .cta-salary-guide_image-wrapper {
+  background-color: transparent !important;
+}
+
 /* Add your custom styles below this line */
 
