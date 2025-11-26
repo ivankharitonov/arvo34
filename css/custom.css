@@ -521,26 +521,40 @@ div[role="banner"].navbar_component {
   color: var(--color-accent-1) !important;
 }
 
+.navbar_dropdown-toggle::after {
+  display: none !important;
+}
+
 .navbar_dropdown-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
   background-color: transparent !important;
   border: none !important;
   padding-right: 0.25rem !important;
 }
 
 .navbar_dropdown-toggle .dropdown-chevron {
+  width: 0.75rem;
+  height: 0.75rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   background-color: transparent !important;
+  margin-left: 0.25rem;
 }
 
 .navbar_dropdown-toggle .dropdown-chevron svg {
   transition: transform 0.25s ease;
   transform: rotate(0deg);
-  color: inherit;
+  color: rgba(255, 255, 255, 0.9);
+  fill: currentColor;
   height: 0.75rem;
   width: 0.75rem;
 }
 
 .navbar_menu-dropdown.w--open .navbar_dropdown-toggle .dropdown-chevron svg {
-  transform: rotate(180deg);
+  transform: rotate(180deg) !important;
 }
 
 .navbar_dropdown-toggle:hover .dropdown-chevron svg,
@@ -860,7 +874,7 @@ input[type="file"]:focus-visible {
 
 /* CTA button text in hiring section */
 .section_cta-hire .button .text-block {
-  color: var(--color-white) !important;
+  color: var(--color-primary) !important;
 }
 
 /* Add your custom styles below this line */
