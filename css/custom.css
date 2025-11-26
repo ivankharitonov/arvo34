@@ -522,7 +522,13 @@ div[role="banner"].navbar_component {
 }
 
 .navbar_dropdown-toggle::after {
-  display: none !important;
+  content: "";
+  display: inline-block;
+  margin-left: 0.25rem;
+  border-left: 0.3rem solid transparent;
+  border-right: 0.3rem solid transparent;
+  border-top: 0.35rem solid rgba(255, 255, 255, 0.9);
+  transition: transform 0.25s ease;
 }
 
 .navbar_dropdown-toggle {
@@ -535,30 +541,15 @@ div[role="banner"].navbar_component {
 }
 
 .navbar_dropdown-toggle .dropdown-chevron {
-  width: 0.75rem;
-  height: 0.75rem;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background-color: transparent !important;
-  margin-left: 0.25rem;
+  display: none !important;
 }
 
-.navbar_dropdown-toggle .dropdown-chevron svg {
-  transition: transform 0.25s ease;
-  transform: rotate(0deg);
-  color: rgba(255, 255, 255, 0.9);
-  fill: currentColor;
-  height: 0.75rem;
-  width: 0.75rem;
-}
-
-.navbar_menu-dropdown.w--open .navbar_dropdown-toggle .dropdown-chevron svg {
+.navbar_menu-dropdown.w--open .navbar_dropdown-toggle::after {
   transform: rotate(180deg) !important;
 }
 
-.navbar_dropdown-toggle:hover .dropdown-chevron svg,
-.navbar_dropdown-toggle:focus .dropdown-chevron svg {
+.navbar_dropdown-toggle:hover::after,
+.navbar_dropdown-toggle:focus::after {
   transform: rotate(0deg) !important;
 }
 
@@ -873,7 +864,9 @@ input[type="file"]:focus-visible {
 }
 
 /* CTA button text in hiring section */
-.section_cta-hire .button .text-block {
+.section_cta-hire .button .text-block,
+.section_cta-hire .button[data-wf--button--general-style="primary"] .text-block,
+.section_cta-hire .button[data-wf--button--general-style="primary"] .button_link {
   color: var(--color-primary) !important;
 }
 
