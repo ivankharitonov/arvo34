@@ -550,11 +550,6 @@ div[role="banner"].navbar_component {
   transform: rotate(180deg) !important;
 }
 
-.navbar_dropdown-toggle:hover::after,
-.navbar_dropdown-toggle:focus::after {
-  transform: rotate(0deg) !important;
-}
-
 /* ============================================
    Footer
    ============================================ */
@@ -870,7 +865,7 @@ input[type="file"]:focus-visible {
 .section_cta-hire .button[data-wf--button--general-style="primary"] .text-block,
 .section_cta-hire .button[data-wf--button--general-style="primary"] .button_link,
 .section_cta-hire .button_link {
-  color: var(--color-primary) !important;
+  color: var(--color-white) !important;
 }
 
 /* Add your custom styles below this line */
