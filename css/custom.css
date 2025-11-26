@@ -545,7 +545,8 @@ div[role="banner"].navbar_component {
 }
 
 .navbar_dropdown-toggle.w--open::after,
-.navbar_menu-dropdown.w--open .navbar_dropdown-toggle::after {
+.navbar_menu-dropdown.w--open .navbar_dropdown-toggle::after,
+.navbar_menu-dropdown:hover .navbar_dropdown-toggle::after {
   transform: rotate(180deg) !important;
 }
 
@@ -867,8 +868,9 @@ input[type="file"]:focus-visible {
 /* CTA button text in hiring section */
 .section_cta-hire .button .text-block,
 .section_cta-hire .button[data-wf--button--general-style="primary"] .text-block,
-.section_cta-hire .button[data-wf--button--general-style="primary"] .button_link {
-  color: var(--color-white) !important;
+.section_cta-hire .button[data-wf--button--general-style="primary"] .button_link,
+.section_cta-hire .button_link {
+  color: var(--color-primary) !important;
 }
 
 /* Add your custom styles below this line */
