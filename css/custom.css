@@ -566,6 +566,15 @@ div[data-wf--button--general-style="tertiary"]:hover {
 .section_cta-hire .button .text-block {
   position: relative;
   z-index: 2;
+  pointer-events: none; /* Fix: Allow clicks to pass through to the link */
+}
+
+/* Ensure text block in other similar buttons also allows clicks to pass through */
+.section_roles-slider .button .text-block,
+.button.w-variant-3a3b1104-5456-783b-0f82-4028fcf9146c .text-block {
+  position: relative;
+  z-index: 2;
+  pointer-events: none;
 }
 
 .section_cta-hire .button_link {
