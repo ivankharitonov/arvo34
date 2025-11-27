@@ -247,12 +247,14 @@ div[data-wf--button--general-style="highlight"]:hover {
   border-color: #1FB3C6 !important;
 }
 
-/* Fix for specific sections where hover turns green */
-.section_cta-hire .button.w-variant-3a3b1104-5456-783b-0f82-4028fcf9146c:hover,
-.section_roles-slider .button.w-variant-3a3b1104-5456-783b-0f82-4028fcf9146c:hover {
+/* Fix for specific sections where hover turns green - Enhanced Specificity */
+body .section_cta-hire .button.w-variant-3a3b1104-5456-783b-0f82-4028fcf9146c:hover,
+body .section_roles-slider .button.w-variant-3a3b1104-5456-783b-0f82-4028fcf9146c:hover,
+body .button.w-variant-3a3b1104-5456-783b-0f82-4028fcf9146c:hover {
   background-color: #1FB3C6 !important;
   border-color: #1FB3C6 !important;
   color: var(--color-white) !important;
+  background-image: none !important;
 }
 
 /* Button text and links */
