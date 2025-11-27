@@ -541,11 +541,33 @@ div[data-wf--button--general-style="tertiary"]:hover {
   color: var(--color-accent-1) !important;
 }
 
+/* Fix navbar icon background and color */
+.dropdown-chevron,
+.navbar_dropdown-toggle svg,
+.navbar_menu-button svg {
+  background-color: transparent !important;
+  fill: var(--color-white) !important;
+}
+
+.navbar_dropdown-toggle .w-embed {
+  background-color: transparent !important;
+}
+
 .navbar_dropdown-toggle {
   color: var(--color-white) !important;
 }
 
 .navbar_dropdown-toggle > div {
+  color: var(--color-white) !important;
+}
+
+/* Update "Our Process" number boxes to Slate Blue with White text */
+.our-process_timeline-icon-wrapper {
+  background-color: var(--color-secondary) !important; /* Slate Blue */
+  color: var(--color-white) !important;
+}
+
+.our-process_timeline-icon-wrapper div {
   color: var(--color-white) !important;
 }
 
