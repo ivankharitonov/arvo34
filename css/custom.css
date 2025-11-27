@@ -563,12 +563,13 @@ div[data-wf--button--general-style="tertiary"]:hover {
 
 /* Update "Our Process" number boxes to Slate Blue with White text */
 .our-process_timeline-icon-wrapper {
-  background-color: var(--color-secondary) !important; /* Slate Blue */
-  color: var(--color-white) !important;
+  background: #324A72 !important; /* Slate Blue */
+  background-color: #324A72 !important;
+  color: #FFFFFF !important;
 }
 
 .our-process_timeline-icon-wrapper div {
-  color: var(--color-white) !important;
+  color: #FFFFFF !important;
 }
 
 /* Make the process tagline readable */
