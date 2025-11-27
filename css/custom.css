@@ -407,16 +407,25 @@ p,
 
 /* Links - Aqua */
 a,
-.navbar_link,
+/* .navbar_link,  <-- Removed to keep navbar white */
 .footer_link,
 .banner_link {
   color: var(--color-accent-1) !important;
 }
 
 a:hover,
-.navbar_link:hover,
+/* .navbar_link:hover, <-- Removed */
 .footer_link:hover {
   color: #1FB3C6 !important; /* Darker aqua on hover */
+}
+
+/* Navbar link specific styles */
+.navbar_link {
+  color: var(--color-white) !important;
+}
+
+.navbar_link:hover {
+  color: var(--color-accent-1) !important; /* Aqua on hover */
 }
 
 /* Active/Current links */
