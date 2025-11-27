@@ -576,6 +576,12 @@ div[data-wf--button--general-style="tertiary"]:hover {
   color: var(--color-white) !important;
 }
 
+/* Ensure footer component has blue background */
+.footer_component {
+  background-color: var(--color-primary) !important;
+  background: var(--color-primary) !important;
+}
+
 /* Update "Our Process" number boxes to Slate Blue with White text */
 .our-process_timeline-icon-wrapper {
   background: #324A72 !important; /* Slate Blue */
