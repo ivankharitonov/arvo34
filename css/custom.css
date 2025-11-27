@@ -417,11 +417,15 @@ a:hover,
 }
 
 /* Footer links - White */
-.footer_link {
+.footer_link,
+.termly-display-preferences,
+.footer1_social-link {
   color: var(--color-white) !important;
 }
 
-.footer_link:hover {
+.footer_link:hover,
+.termly-display-preferences:hover,
+.footer1_social-link:hover {
   color: var(--color-accent-1) !important; /* Aqua on hover */
 }
 
