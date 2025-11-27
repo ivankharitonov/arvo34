@@ -1394,69 +1394,87 @@
   </script>
   <script src="https://cdn.jsdelivr.net/gh/Joao-Aquino/webflow-scripts@refs/heads/main/somewhere/savings-splide.js">
   </script>
-  <script>
-   const processedNames = new WeakSet();
-    
-    function modifyName(nameEl) {
-        if (processedNames.has(nameEl)) return;
+      <script>
+       const processedElements = new WeakSet();
         
-        const fullName = nameEl.textContent.trim();
-        const nameParts = fullName.split(' ');
-        
-        if (nameParts.length >= 2) {
-            const firstName = nameParts[0];
-            const lastInitial = nameParts[nameParts.length - 1].charAt(0);
-            nameEl.textContent = `${firstName} ${lastInitial}`;
-            processedNames.add(nameEl);
-        }
-    }
-    
-    function processNames(shadowRoot) {
-        const nameElements = shadowRoot.querySelectorAll('.sj-endorser-name');
-        nameElements.forEach(modifyName);
-    }
-    
-    function setupObserver() {
-        const embeds = document.querySelectorAll('.senja-embed');
-        let allReady = true;
-        
-        embeds.forEach((embed, index) => {
-            if (embed && embed.shadowRoot) {
-                processNames(embed.shadowRoot);
-                
-                const observer = new MutationObserver((mutations) => {
-                    mutations.forEach((mutation) => {
-                        mutation.addedNodes.forEach((node) => {
-                            if (node.nodeType === 1) {
-                                if (node.classList && node.classList.contains('sj-endorser-name')) {
-                                    modifyName(node);
-                                }
-                                if (node.querySelectorAll) {
-                                    const names = node.querySelectorAll('.sj-endorser-name');
-                                    names.forEach(modifyName);
-                                }
-                            }
-                        });
-                    });
-                });
-                
-                observer.observe(embed.shadowRoot, { 
-                    childList: true, 
-                    subtree: true 
-                });
-                
-                
-            } else {
-                allReady = false;
+        function modifyName(nameEl) {
+            if (processedElements.has(nameEl)) return;
+            
+            const fullName = nameEl.textContent.trim();
+            const nameParts = fullName.split(' ');
+            
+            if (nameParts.length >= 2) {
+                const firstName = nameParts[0];
+                const lastInitial = nameParts[nameParts.length - 1].charAt(0);
+                nameEl.textContent = `${firstName} ${lastInitial}`;
+                processedElements.add(nameEl);
             }
-        });
-        
-        if (!allReady) {
-            setTimeout(setupObserver, 100);
         }
-    }            
-    setTimeout(setupObserver, 10);
-  </script>
+
+        function modifyText(textEl) {
+            if (processedElements.has(textEl)) return;
+            
+            let text = textEl.textContent;
+            // Replace Somewhere.com and Somewhere with Arvo 34
+            // We check for "Somewhere" case-sensitively to avoid replacing the common word "somewhere"
+            if (text.includes('Somewhere')) {
+                 const newText = text
+                    .replace(/Somewhere\.com/g, 'Arvo 34')
+                    .replace(/Somewhere/g, 'Arvo 34');
+                 
+                 if (text !== newText) {
+                     textEl.textContent = newText;
+                 }
+            }
+            processedElements.add(textEl);
+        }
+        
+        function processShadowDom(shadowRoot) {
+            // Fix Names
+            const nameElements = shadowRoot.querySelectorAll('.sj-endorser-name');
+            nameElements.forEach(modifyName);
+
+            // Fix Review Text
+            const allElements = shadowRoot.querySelectorAll('*');
+            allElements.forEach(el => {
+                // Only touch leaf nodes with text
+                if (el.children.length === 0 && el.textContent.trim().length > 0) {
+                    // Avoid script/style/svg
+                    if (['SCRIPT', 'STYLE', 'SVG', 'PATH', 'CODE'].includes(el.tagName)) return;
+                    modifyText(el);
+                }
+            });
+        }
+        
+        function setupObserver() {
+            const embeds = document.querySelectorAll('.senja-embed');
+            let allReady = true;
+            
+            embeds.forEach((embed, index) => {
+                if (embed && embed.shadowRoot) {
+                    processShadowDom(embed.shadowRoot);
+                    
+                    const observer = new MutationObserver((mutations) => {
+                        // Simple re-scan on mutation, guarded by WeakSet
+                        processShadowDom(embed.shadowRoot);
+                    });
+                    
+                    observer.observe(embed.shadowRoot, { 
+                        childList: true, 
+                        subtree: true 
+                    });
+                    
+                } else {
+                    allReady = false;
+                }
+            });
+            
+            if (!allReady) {
+                setTimeout(setupObserver, 100);
+            }
+        }            
+        setTimeout(setupObserver, 10);
+      </script>
   <!-- Custom JavaScript - Edit js/custom.js to add your scripts -->
   <script src="js/custom.js" type="text/javascript">
   </script>
