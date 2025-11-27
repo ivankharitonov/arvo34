@@ -359,7 +359,12 @@ body {
   color: var(--color-white) !important;
 }
 
+/* Fix: Only color SVG content, NOT background of SVG/Icon containers */
 .navbar_dropdown-toggle svg,
+.navbar_menu-button svg {
+  fill: var(--color-white) !important;
+}
+
 .navbar_menu-button .menu-icon2_line-top,
 .navbar_menu-button .menu-icon2_line-middle,
 .navbar_menu-button .menu-icon2_line-bottom,
@@ -565,24 +570,23 @@ div[data-wf--button--general-style="tertiary"]:hover {
 
 .section_cta-hire .button .text-block {
   position: relative;
-  z-index: 2;
-  pointer-events: none; /* Fix: Allow clicks to pass through to the link */
-}
-
-/* Ensure text block in other similar buttons also allows clicks to pass through */
-.section_roles-slider .button .text-block,
-.button.w-variant-3a3b1104-5456-783b-0f82-4028fcf9146c .text-block {
-  position: relative;
-  z-index: 2;
-  pointer-events: none;
+  z-index: 1; /* Reverted to 1 to be under the link */
+  /* pointer-events: none; Removed as not needed if below link */
 }
 
 .section_cta-hire .button_link {
-  z-index: 1;
+  z-index: 10; /* Higher z-index to be clickable */
   display: block;
   width: 100%;
   height: 100%;
   background: transparent;
+}
+
+/* Ensure text block in other similar buttons behaves correctly */
+.section_roles-slider .button .text-block,
+.button.w-variant-3a3b1104-5456-783b-0f82-4028fcf9146c .text-block {
+  position: relative;
+  z-index: 1;
 }
 
 /* Add your custom styles below this line */
