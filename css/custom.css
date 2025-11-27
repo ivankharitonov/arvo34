@@ -407,16 +407,22 @@ p,
 
 /* Links - Aqua */
 a,
-/* .navbar_link,  <-- Removed to keep navbar white */
-.footer_link,
 .banner_link {
   color: var(--color-accent-1) !important;
 }
 
 a:hover,
-/* .navbar_link:hover, <-- Removed */
-.footer_link:hover {
+.banner_link:hover {
   color: #1FB3C6 !important; /* Darker aqua on hover */
+}
+
+/* Footer links - White */
+.footer_link {
+  color: var(--color-white) !important;
+}
+
+.footer_link:hover {
+  color: var(--color-accent-1) !important; /* Aqua on hover */
 }
 
 /* Navbar link specific styles */
@@ -619,6 +625,13 @@ div[data-wf--button--general-style="tertiary"]:hover {
 .button.w-variant-3a3b1104-5456-783b-0f82-4028fcf9146c .text-block {
   position: relative;
   z-index: 1;
+}
+
+/* Logo container - ensure proper display */
+.navbar_logo,
+.footer_logo {
+  /* Removed complex filters; logo is now natively white */
+  filter: none !important;
 }
 
 /* Add your custom styles below this line */
