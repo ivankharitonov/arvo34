@@ -809,3 +809,60 @@ font-weight: 400 !important;
   color: var(--color-white) !important;
 }
 
+
+
+/* ============================================
+   Roles Page Specific Fixes
+   ============================================ */
+
+/* Start Your Search Today Section Fix - Midnight Blue */
+.section_form,
+#form-general {
+    background-color: var(--color-primary) !important;
+    background: var(--color-primary) !important;
+    color: var(--color-white) !important;
+}
+
+.section_form h2, 
+.section_form p,
+#form-general h2,
+#form-general p,
+.section_form .heading-style-h2-alternate {
+     color: var(--color-white) !important;
+}
+
+/* Load More Button Fix - Aqua */
+.w-pagination-next,
+.blog_next-pagination {
+    background-color: var(--color-accent-1) !important;
+    border-color: var(--color-accent-1) !important;
+    color: var(--color-white) !important;
+    opacity: 1 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border-radius: 4px;
+}
+
+.w-pagination-next:hover,
+.blog_next-pagination:hover {
+    background-color: #1FB3C6 !important; /* Darker aqua on hover */
+    border-color: #1FB3C6 !important;
+}
+
+.w-pagination-next div,
+.blog_next-pagination div {
+    color: var(--color-white) !important;
+}
+
+.w-pagination-next svg,
+.blog_next-pagination svg {
+    fill: var(--color-white) !important;
+}
+
+.w-pagination-next .icon-embed-xxsmall,
+.blog_next-pagination .icon-embed-xxsmall {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
