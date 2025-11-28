@@ -794,3 +794,18 @@ font-weight: 400 !important;
 .splide__pagination {display: none !important;}
 .splide *:focus {outline: none;}
 .splide__track {overflow: visible !important;}
+
+/* Roles Page Hero Fix */
+.section_header-how-it-works,
+.header-how-it-works_component {
+  background-color: var(--color-primary) !important;
+  background: var(--color-primary) !important;
+  color: var(--color-white) !important;
+}
+
+.section_header-how-it-works h1,
+.section_header-how-it-works p,
+.section_header-how-it-works .text-size-medium {
+  color: var(--color-white) !important;
+}
+
