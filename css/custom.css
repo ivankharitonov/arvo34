@@ -551,6 +551,11 @@ div[data-wf--button--general-style="tertiary"]:hover {
   background-color: transparent !important;
 }
 
+/* Banner background */
+.banner_component {
+  background-color: var(--color-primary) !important;
+}
+
 /* Brighten banner text + Resources link */
 .banner_component .banner_content-wrapper p {
   color: var(--color-white) !important;
